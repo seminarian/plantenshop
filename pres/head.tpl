@@ -22,9 +22,10 @@
 {$paginaStylesheets}
 
 <!-- algemene JS scripts voor alle pagina's via vaste SCRIPT elementen-->
-<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-<script src='js/vendor/jquery/jquery-ui-1.11.4.custom/jquery-ui.js'></script>
 <script src='js/vendor/jquery/jquery-2.1.4.js'></script>
+<script src='js/vendor/jquery/jquery-ui-1.11.4.custom/jquery-ui.js'></script>
+
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
 <!-- pagina-gebonden JS scripts-->
 {$paginaScripts}

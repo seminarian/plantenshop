@@ -53,7 +53,7 @@ if(isset($_GET['page'])){
 			$tpl['body_id'] 			= "shop";					
 			//content
 			$tpl['rechts'] 				= getPlanten($soort_id, $kleur, $hoogte_min, $hoogte_max);
-			
+			$tpl['paginaScripts']		= getScriptElements("js/shop.js");
 			break;
 		
 		case "zorg":

@@ -302,8 +302,8 @@ function getPlanten($soort_id, $kleur, $hoogte_min, $hoogte_max){
 	
 	//zoeken 
 	$str .= "<section>
-			<div id='zoeken'>
-      		<p><a id='adv_zoeken_link' href='#'>geavanceerd zoeken</a></p>
+			<div id='zoeken'
+>      		<p><a id='adv_zoeken_link' href='#'>geavanceerd zoeken</a></p>
 			
 			<form name='frm1' id='frm1' class='cmxform' action='index.php' method='get'>
 			<input type='hidden' name='page' value='shop' />
@@ -311,14 +311,15 @@ function getPlanten($soort_id, $kleur, $hoogte_min, $hoogte_max){
     
 	//adv zoeken
 		$str .= "<!--start geavanceerd zoeken -->
-				<div id='adv_zoeken' style='display:none' >"; // 
+
+				<div id='adv_zoeken'>"; // 
 		
 		$str .= "<div><label for='kleur'>kleur: </label>". $kleuren_dd . "</div>";
 		$str .= "<div>
 					<label for='hoogte'>hoogte tussen: </label>
 					<div class='controlbox vert'>
-					<input type='text' id='hoogte_min' name='hoogte_min' size='4' class='kort' value='0'  /> en
-					<input type='text' id='hoogte_max' name='hoogte_max' size='4' class='kort' value='5000' />
+					<input type='text' id='hoogte_min' name='hoogte_min' size='4' class='kort' /> en
+					<input type='text' id='hoogte_max' name='hoogte_max' size='4' class='kort' />
 					</div>
 					</div>";
 						
@@ -327,7 +328,7 @@ function getPlanten($soort_id, $kleur, $hoogte_min, $hoogte_max){
 					<div class='controlbox vert'>
 
 					<!--start slider -->
-					
+					<div id='slider-range-hoogte' class='slider'></div>
 					<!--einde slider -->
 					
 					</div>
