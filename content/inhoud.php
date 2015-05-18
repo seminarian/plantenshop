@@ -385,7 +385,7 @@ function getRegistreer(){
 					  </div>
 					  <div>
 						<label for='straat'>Straat:</label>
-						<input type='text' title='uw straat  met huisnummer'  placeholder='straat + huisnummer'  id='straat' name='straat'  />
+						<input type='text' title='uw straat  met huisnummer'  placeholder='straat + huisnummer'  id='straat' name='straat' required />
 					  </div>
 					  <div>
 						<label for='gemeente'>Gemeente:</label>
@@ -491,9 +491,17 @@ function getVerzorging(){
 				</section>";
 				
   		$str .= "<section>
-				
+              <p><label><input type='checkbox' id='toonWaterplanten' /> info inclusief Waterplanten</label></p>
+				<p>Soms is goede verzorging onvoldoende: een aantal ziektes belagen onze tuinplanten. <a href='#' id='toonZiektes'>Meer weten over ziektes?</a></p>
 				<!--start div verzorging-->
 				<div id='verzorging'>
+        <!--start UL toegeoveogd voor tabs-->
+        <ul>
+          <li><a href='#bodem'>Bodem en voedsel</a></li>
+          <li><a href='#vermeerderen'>Vermeerderen</a></li>
+          <li><a href='#licht'>Zon of schaduw</a></li>
+          <li><a href='#waterplanten'>waterplanten</a></li>
+        </ul>
 				<div id='bodem'>
 				<h3>Zorg voor een vochtige wortelkluit</h3>
 				<p> Vaste planten worden tegenwoordig afgeleverd in potten. Ze zien er misschien niet altijd even florissant uit, maar de kans dat de planten in de tuin onmiddellijk doorgroeien is bijna 100%. Een ander voordeel is dat in feite het hele jaar door geplant kan worden. Maar de voorkeur van de vakman gaat uit naar planten in het najaar. De ervaring leert echter, dat tuinliefhebbers vrijwel steeds het nieuwe groeiseizoen afwachten en dus gaan planten in april en mei.</p>
