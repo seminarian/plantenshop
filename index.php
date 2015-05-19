@@ -53,7 +53,8 @@ if(isset($_GET['page'])){
 			$tpl['body_id'] 			= "shop";					
 			//content
 			$tpl['rechts'] 				= getPlanten($soort_id, $kleur, $hoogte_min, $hoogte_max);
-			$tpl['paginaScripts']		= getScriptElements("js/shop.js");
+			$tpl['paginaScripts']		= getScriptElements(array("js/shop.js","js/vendor/jquery/Datatables-1.10.7/media/js/jquery.dataTables.min.js"));
+			$tpl['paginaStylesheets']	= getLinkElements("js/vendor/jquery/Datatables-1.10.7/media/css/jquery.dataTables.css");
 			break;
 		
 		case "zorg":
@@ -63,7 +64,6 @@ if(isset($_GET['page'])){
 			//content
 			$tpl['rechts'] 				= getVerzorging();
 			$tpl['paginaScripts']		= getScriptElements("js/zorg.js");
-			
 			break;		
 		
 		case "galerij":
@@ -72,6 +72,8 @@ if(isset($_GET['page'])){
 			$tpl['body_id'] 			= "galerij";					
 			//content
 			$tpl['rechts'] 				= getGalerij();
+			$tpl['paginaScripts']		= getScriptElements(array("js/vendor/jquery/lightbox/js/lightbox.js"));
+			$tpl['paginaStylesheets']	= getLinkElements("js/vendor/jquery/lightbox/css/lightbox.css");
 			
 			
 

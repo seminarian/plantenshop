@@ -1,6 +1,6 @@
 $(function() {
 // 
-	
+	console.log("welkom");
 	$("#slider-range-hoogte").slider({
 		range: true,
 		values: [100,2500],
@@ -49,6 +49,18 @@ $(function() {
 	// 	e.preventDefault();
 	// 	toggleZoeken($(this),$advZoeken)
 	// })
+	//datatables
+	$('#plantenlijst').dataTable({
+		"bPaginate" : true,
+		"iDisplayLength": 20,
+		"bSort" : true,
+		"iDisplayStart": 20,
+		"sPaginationType": "full_numbers",
+		"aLengthMenu": [[10,25,50,-1],[10,25,50,"Alle records"]],
+		"bProcessing" : true,
+		"aaSorting" : [[6,'asc'],[2,'desc']]
+	});
+	console.log("datatable uitgevooerd");
 
 }) //einde doc ready
 
